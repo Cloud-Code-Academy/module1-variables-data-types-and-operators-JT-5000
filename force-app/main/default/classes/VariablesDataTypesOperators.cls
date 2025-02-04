@@ -32,7 +32,21 @@ public with sharing class VariablesDataTypesOperators {
      * @return The sum of the two numbers, or null if either number is null.
      */
     public static Integer addition(Integer a, Integer b) {  
-        return null; // Replace null with the variable you used to store the result
+        
+        //Initializing variables
+        Integer sum;
+
+        //Evaluating variables to determine if either is null
+        if (a == null || b == null) {
+            return null;
+        }
+        else {
+            //Performing addition of arguments passed to our method
+            sum = a + b;
+        }
+
+        //Return the sum 
+        return sum; 
     }
 
     /**
@@ -44,7 +58,21 @@ public with sharing class VariablesDataTypesOperators {
      * @return The difference between the two numbers.
      */
     public static Integer subtraction(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
+
+        //Initializing variables
+        Integer difference;
+
+        //Ensure both arguments are not null before proceeding
+        if (a == null || b == null) {
+            return 0;
+        }
+        else {
+            //Calculate the difference when subtracting
+            difference = a - b;
+        }
+
+        //Return the difference
+        return difference; 
     }
 
     /**
@@ -56,7 +84,21 @@ public with sharing class VariablesDataTypesOperators {
      * @return The product of the two numbers.
      */
     public static Integer multiplication(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
+
+        //Initializing variables
+        Integer product;
+
+        //Make certain neither argument is null
+        if (a == null || b == null) {
+            return 0;
+        }
+        else {
+            //Calculate the product of a & b
+            product = a * b;
+        }
+
+        //Return the product of the two arguments
+        return product; 
     }
 
     /**
@@ -69,7 +111,24 @@ public with sharing class VariablesDataTypesOperators {
      * @return The quotient of the division, or 0 if the denominator is zero.
      */
     public static Double division(Double a, Double b) {
-        return null; // Replace null with the variable you used to store the result
+
+        //Initializing variables
+        Double quotient;
+
+        //Make sure neither a or b is null
+        if (a == null || b ==  null) {
+            return 0;
+        }
+        else if (b == 0) {
+            return 0;
+        }
+        else {
+            //Leverage the Math.mod method to fetch the remainder
+            quotient = a / b;
+        }
+
+        //Return the quotient
+        return quotient; 
     }
 
     /**
@@ -83,7 +142,27 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the number is even, False otherwise.
      */
     public static Boolean isEven(Integer num) {
-        return null; // Replace null with the variable you used to store the result
+
+        //Initializing variables
+        Integer remainder;
+        Integer evenDivisor;
+
+        //Set divisor to 2
+        evenDivisor = 2;
+
+        //Leverage the Math.mod method to fetch the remainder
+        remainder = Math.mod(num, evenDivisor);
+
+        //Check to see if the remainder is 0
+        if (remainder == 0) {
+            return true;
+        }
+        else if (remainder == null) {
+            return false;
+        }
+        else {
+            return false;
+        }
     }
 
     /**
