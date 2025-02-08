@@ -22,6 +22,9 @@
  */
 
 public with sharing class VariablesDataTypesOperators {
+
+    static final Integer MILLISECONDS_PER_MINUTE = 60000;
+
     /**
      * Question 1
      * Performs addition of two numbers.
@@ -118,7 +121,7 @@ public with sharing class VariablesDataTypesOperators {
         }else if (b == 0) {
             return 0;
         }else {
-            //Leverage the Math.mod method to fetch the remainder
+            //Calculate the quotient
             quotient = a / b;
         }
 
@@ -150,8 +153,6 @@ public with sharing class VariablesDataTypesOperators {
         //Check to see if the remainder is 0
         if (remainder == 0) {
             return true;
-        }else if (remainder == null) {
-            return false;
         }else {
             return false;
         }
@@ -267,7 +268,7 @@ public with sharing class VariablesDataTypesOperators {
      * @param minutes The number of minutes.
      * @return The number of milliseconds equivalent to the given number of minutes.
      */
-    static final Integer MILLISECONDS_PER_MINUTE = 60000;
+    
     public static Integer convertMinutesToMilliseconds(Integer minutes) {
         
         //Declaring variables
@@ -351,7 +352,7 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Double complexOrderOfOperations(Integer a, Integer b, Integer c, Integer d, Integer e) {
         // Add parentheses around the multiplication and subtraction operations so that they are performed before division and addition
-        Double result = ((a * b) - c) / (Double) d + e;
+        Double result = (a * b - c) / (Double) d + e;
 
         //Return result
         return result;
@@ -440,7 +441,7 @@ public with sharing class VariablesDataTypesOperators {
         Decimal monthlyPaycheck;
 
         //Calculating weekly paycheck
-        weeklyPaycheck = hourlyRate * numberOfHours;
+        weeklyPaycheck = calculateWeeklyPaycheck(hourlyRate, numberOfHours);
 
         //Calculcating monthly paycheck
         monthlyPaycheck = weeklyPaycheck * 4;
