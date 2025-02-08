@@ -397,7 +397,7 @@ public with sharing class VariablesDataTypesOperators {
         divisionResult = a / b;
 
         // Write the code for type casting the divisionResult to an Integer
-        Integer roundedResult = (Integer) Math.floor(divisionResult);
+        Integer roundedResult = divisionResult.intValue();
 
         //Return the result
         return roundedResult; 
